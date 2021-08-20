@@ -1,7 +1,7 @@
 <?php 
 
 // this code will only execute after the submit button is clicked
-if (isset($_POST['submit'])) {
+
 	
     // include the config file that we created before
     require "../config.php"; 
@@ -25,17 +25,15 @@ if (isset($_POST['submit'])) {
         // if there is an error, tell us what it is
 		echo $sql . "<br>" . $error->getMessage();
 	}	
-}
+
 ?>
 
 
 <?php include "templates/header.php"; ?>  
 
 
-<?php  
-    if (isset($_POST['submit'])) {
-        //if there are some results
-        if ($result && $statement->rowCount() > 0) { ?>
+
+
             <h2>Results</h2>
 
             <?php // This is a loop, which will loop through each result in the array
@@ -64,8 +62,7 @@ if (isset($_POST['submit'])) {
 
 <hr>
 <?php }; //close the foreach
-        }; 
-    }; 
+ 
 ?>
 
 
