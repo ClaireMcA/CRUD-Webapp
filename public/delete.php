@@ -80,7 +80,7 @@
                         Work type:
                         <?php echo $row['worktype']; ?><br>
 
-                        <a href='delete.php?id=<?php echo $row['id']; ?>'>Delete</a>
+                        <a onClick="return confirm('Do you really want to do this?');" href='delete.php?id=<?php echo $row['id']; ?>'>Delete</a>
                     </p>
             <?php   // this will output all the data from the array
                     //echo '<pre>'; var_dump($row); 
